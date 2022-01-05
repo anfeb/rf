@@ -20,8 +20,7 @@ const defaultMenu = {
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
+├  *follow @anfebn*
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
@@ -44,7 +43,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'sticker': 'Stiker',
     'kerang': 'Kerang Ajaib',
     'quotes': 'Quotes',
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
+    'admin': 'Admin',
     'group': 'Grup',
     'premium': 'Premium',
     'internet': 'Internet',
@@ -78,7 +77,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'quotes': 'Quotes'
   }
   if (teks == 'admin') tags = {
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`
+    'admin': 'Admin'
   }
   if (teks == 'grup') tags = {
     'group': 'Grup'

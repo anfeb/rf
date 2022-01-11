@@ -20,7 +20,8 @@ const defaultMenu = {
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├  *follow @anfebn*
+├ *Dont Forget Follow IG*
+├ https://instagram.com/anfebn
 └────
 %readmore`.trimStart(),
   header: '┌─〔 %category 〕',
@@ -32,6 +33,7 @@ ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
+  let name = conn.getName(m.sender)
   let tags
   let teks = `${args[0]}`.toLowerCase()
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
@@ -187,8 +189,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
-          "title": `${ucapan()}, ${name}`.trim(),
-          "description": "© stikerin",
+          "title": `${ucapan()}\nKak, ${name}\n\nDont Forget Follow\nhttps://instagram.com/anfebn\n\nBerikut adalah Daftar Menu\n\nBila Menu Tidak Bisa Di Klik\nKetik .? All`,
+          "description": "@anfebn",
           "buttonText": "Klik Disini",
           "listType": "SINGLE_SELECT",
           "sections": [
@@ -197,97 +199,97 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                 {
                   "title": `Semua Perintah`,
                   "description": "",
-                  "rowId": `${_p}? all`
+                  "rowId": ".? all"
                 }, {
                   "title": "Game",
                   "description": "",
-                  "rowId": `${_p}? game`
+                  "rowId": ".? game"
 
                 }, {
                   "title": "XP",
                   "description": "",
-                  "rowId": `${_p}? xp`
+                  "rowId": ".? xp"
 
                 }, {
                   "title": "Stiker",
                   "description": "",
-                  "rowId": `${_p}? stiker`
+                  "rowId": ".? stiker"
                 }, {
                   "title": "Kerang Ajaib",
                   "description": "",
-                  "rowId": `${_p}? kerangajaib`
+                  "rowId": ".? kerangajaib"
                 }, {
                   "title": "Quotes",
                   "description": "",
-                  "rowId": `${_p}? quotes`
+                  "rowId": ".? quotes"
                 }, {
                   "title": "Admin",
                   "description": "",
-                  "rowId": `${_p}? admin`
+                  "rowId": ".? admin"
                 }, {
                   "title": "Grup",
                   "description": "",
-                  "rowId": `${_p}? grup`
+                  "rowId": ".? grup"
                 }, {
                   "title": "Premium",
                   "description": "",
-                  "rowId": `${_p}? premium`
+                  "rowId": ".? premium"
                 }, {
                   "title": "Internet",
                   "description": "",
-                  "rowId": `${_p}? internet`
+                  "rowId": ".? internet"
                 }, {
                   "title": "Anonymous",
                   "description": "",
-                  "rowId": `${_p}? anonymous`
+                  "rowId": ".? anonymous"
                 }, {
                   "title": "Nulis & Logo",
                   "description": "",
-                  "rowId": `${_p}? nulis`
+                  "rowId": ".? nulis"
                 }, {
                   "title": "Downloader",
                   "description": "",
-                  "rowId": `${_p}? downloader`
+                  "rowId": ".? downloader"
                 }, {
                   "title": "Tools",
                   "description": "",
-                  "rowId": `${_p}? tools`
+                  "rowId": ".? tools"
                 }, {
                   "title": "Fun",
                   "description": "",
-                  "rowId": `${_p}? fun`
+                  "rowId": ".? fun"
                 }, {
                   "title": "Database",
                   "description": "",
-                  "rowId": `${_p}? database`
+                  "rowId": ".? database"
                 }, {
                   "title": "Vote & Absen",
                   "description": "",
-                  "rowId": `${_p}? vote`
+                  "rowId": ".? vote"
                 }, {
                   "title": "Al-Qur\'an",
                   "description": "",
-                  "rowId": `${_p}? quran`
+                  "rowId": ".? quran"
                 }, {
                   "title": "Pengubah Suara",
                   "description": "",
-                  "rowId": `${_p}? audio`
+                  "rowId": ".? audio"
                 }, {
                   "title": "Jadi Bot",
                   "description": "",
-                  "rowId": `${_p}? jadibot`
+                  "rowId": ".? jadibot"
                 }, {
                   "title": "Info",
                   "description": "",
-                  "rowId": `${_p}? info`
+                  "rowId": ".? info"
                 }, {
                   "title": "Tanpa Kategori",
                   "description": "",
-                  "rowId": `${_p}? tanpakategori`
+                  "rowId": ".? tanpakategori"
                 }, {
                   "title": "Owner",
                   "description": "",
-                  "rowId": `${_p}? owner`
+                  "rowId": ".? owner"
                 }
               ]
             }
@@ -376,7 +378,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with ❤️ by ariffb', 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), 'made with @anfebn', 'Pemilik Bot', '.owner', 'Donasi', '.donasi', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

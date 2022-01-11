@@ -412,18 +412,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari"
+  res = "Selamat DiniHari"
   if (time >= 4) {
-    res = "Selamat pagi"
+    res = "Selamat Pagi"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Selamat Siang"
   }
   if (time >= 15) {
-    res = "Selamat sore"
+    res = "Selamat Sore"
   }
   if (time >= 18) {
-    res = "Selamat malam"
+    res = "Selamat Malam"
   }
   return res
 }

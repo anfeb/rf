@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anfeb/stikerinbot.git"
+    "url": "git+https://github.com/anfeb/rf.git"
   },
   "keywords": [
     "whatsapp-bot"
@@ -22,9 +22,9 @@
   "author": "Anfebn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anfeb/stikerinbot/issues"
+    "url": "https://github.com/anfeb/rf/issues"
   },
-  "homepage": "https://github.com/anfebn/stikerinbot",
+  "homepage": "https://github.com/anfebn/rf",
   "dependencies": {
     "@adiwajshing/baileys": "github:melcanz/Baileys",
     "awesome-phonenumber": "^2.54.0",
